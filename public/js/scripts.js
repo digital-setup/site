@@ -134,9 +134,11 @@ $("#form-contact").on("submit", function(e) {
     data: $("#form-contact").serialize(),
     success: function(data, textStatus) {
       formSuccess();
+      console.log(textStatus);
     },
     error: function(xhr, er) {
       formSuccess();
+      console.log(er);
     }
   });
 
