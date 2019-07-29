@@ -128,19 +128,15 @@ $("#form-contact").on("submit", function(e) {
     return false;
   }
 
-  $.ajax({
-    url: "https://vnda.wufoo.com/forms/z5eilza1k3sc6u/#public",
-    type: "POST",
-    data: $("#form-contact").serialize(),
-    success: function(data, textStatus) {
-      formSuccess();
-      console.log(textStatus);
-    },
-    error: function(xhr, er) {
-      formSuccess();
-      console.log(er);
+  $.post(
+    "https://vnda.wufoo.com/forms/z5eilza1k3sc6u/#public",
+    $("#form-contact").serialize(),
+    function(data) {
+      console.log(data);
     }
-  });
+  );
+
+  formSuccess();
 
   return true;
 });
