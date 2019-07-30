@@ -120,7 +120,7 @@ $("#form-contact").on("submit", function(e) {
 
   if (!verifyInput($("#Field1"))) {
     return false;
-  } else if (!verifyInput($("#Field2"))) {
+  } else if (!verifyInput($("#Field8"))) {
     return false;
   } else if (!verifyInput($("#Field3"))) {
     return false;
